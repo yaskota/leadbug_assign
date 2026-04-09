@@ -1,0 +1,10 @@
+// config/mailer.js
+import nodemailer from "nodemailer";
+
+export const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.APP_PASSWORD // Google App Password
+    }
+});
